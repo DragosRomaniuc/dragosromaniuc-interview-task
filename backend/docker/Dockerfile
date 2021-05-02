@@ -1,10 +1,9 @@
 FROM node:alpine AS development
 
 RUN apk update && apk add bash
+RUN apk add --no-cache python
 RUN apk add --no-cache --virtual builds-deps \
         build-base \
-        python \
-        python \
         make \
         g++ 
 
